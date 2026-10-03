@@ -1,0 +1,84 @@
+# Terms that must not appear in bug reports, the test report, Actual Result text or anything sent to Jira.
+# Shared by web and mobile: the web skills should use this same list.
+# One per line, matched case-insensitively as whole words. Lines starting with "re:" are regular expressions.
+# Text inside double quotes is exempt in bugs and in the report
+# (exact app messages, console text and typed input are quoted).
+Playwright
+script
+scripts
+scripted
+test runner
+runner
+spec
+specs
+spec file
+locator
+locators
+selector
+selectors
+XPath
+DOM
+assertion
+assertions
+toBeVisible
+toHaveText
+toHaveURL
+waitFor
+waitForSelector
+timeout
+timeouts
+timed out
+TimeoutError
+strict mode
+element not found
+element(s) not found
+headless
+fixture
+fixtures
+trace
+trace file
+worker
+workers
+retry
+retries
+retried
+stack trace
+automation
+automation run
+automated
+HAR
+npx
+re:\bexpect\s*\(
+re:\bgetBy(Role|Text|Label|TestId|Placeholder)\b
+re:\bpage\.(goto|click|fill|locator)\b
+re:\btest-results\b
+re:\bresults\.json\b
+re:\.spec\.ts\b
+re:\bcss\s+selector\b
+# --- mobile (build-mobile-test-cases / execute-mobile-test-cases, plan section 6.7) ---
+Appium
+WebdriverIO
+wdio
+driver
+drivers
+capabilities
+capability
+session
+sessions
+resource id
+resource-id
+content description
+content-desc
+accessibility id
+UiSelector
+UiAutomator2
+XCUITest
+widget tree
+context
+NATIVE_APP
+FLUTTER
+adb
+logcat
+re:\bstartRecordingScreen\b
+re:\bmobile:\s*\w+
+re:\bwdio\.(android|ios)\.conf\b

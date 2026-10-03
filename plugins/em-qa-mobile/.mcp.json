@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "appium-mcp": {
+      "command": "npx",
+      "args": ["-y", "appium-mcp@latest"],
+      "env": {
+        "NO_UI": "true",
+        "REMOTE_SERVER_URL_ALLOW_REGEX": "^https?://(127\\.0\\.0\\.1|localhost)(:\\d+)?(/.*)?$"
+      }
+    }
+  }
+}
