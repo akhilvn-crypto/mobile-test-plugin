@@ -15,7 +15,7 @@ Out of scope for now: API, security and accessibility testing (level codes reser
 ## Install
 
 ```
-/plugin marketplace add "D:\Mobile plugin"          # or the Git repo of this folder
+/plugin marketplace add akhilvn-crypto/mobile-test-plugin      # or a local path to this folder
 /plugin install em-qa-mobile@em-qa-mobile-marketplace
 ```
 
