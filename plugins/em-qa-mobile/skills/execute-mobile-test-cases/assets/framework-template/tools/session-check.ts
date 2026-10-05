@@ -15,7 +15,7 @@ const arg = (name: string, def: string) => {
   return i >= 0 && args[i + 1] ? args[i + 1] : def;
 };
 const platform = arg('platform', env('PLATFORM', 'android')).toLowerCase() === 'ios' ? 'ios' : 'android';
-const mode = arg('mode', 'auto');
+const mode = arg('mode', env('FLUTTER_MODE', 'auto') === 'native' ? 'native' : 'auto');
 const appium = new URL(env('APPIUM_URL', 'http://127.0.0.1:4723'));
 
 function caps(integration: boolean): Record<string, unknown> {
@@ -39,7 +39,7 @@ function caps(integration: boolean): Record<string, unknown> {
     'appium:noReset': true,
     'appium:newCommandTimeout': 120,
   });
-  if (integration) c['appium:flutterServerLaunchTimeout'] = 60000;
+  if (integration) c['appium:flutterServerLaunchTimeout'] = 20000;
   return Object.fromEntries(Object.entries(c).filter(([, v]) => v !== undefined && v !== ''));
 }
 
@@ -51,7 +51,7 @@ async function open(integration: boolean) {
     path: appium.pathname || '/',
     logLevel: 'silent',
     connectionRetryCount: 0,
-    connectionRetryTimeout: 300000,
+    connectionRetryTimeout: integration ? 45000 : 300000,
     capabilities: caps(integration) as WebdriverIO.Capabilities,
   });
 }

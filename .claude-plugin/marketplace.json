@@ -3,14 +3,14 @@
   "owner": { "name": "Akhil VN" },
   "metadata": {
     "description": "Emvigo QA mobile toolkit: Flutter test cases from real-device Appium exploration, Appium execution with reports, and Jira bug filing",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
     {
       "name": "em-qa-mobile",
       "source": "./plugins/em-qa-mobile",
       "description": "Builds mobile test cases (CMP, INT, E2E, UI, MOB) for Flutter apps from docs, a test plan and Appium exploration on a real device; executes them with WebdriverIO + TypeScript + Appium, updates MD/XLSX results, files genuine bugs with recordings and device logs, writes the test report, and files bugs into Jira.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": { "name": "Akhil VN" },
       "category": "testing",
       "keywords": ["qa", "mobile", "appium", "flutter", "android", "ios", "webdriverio", "jira", "xlsx"]

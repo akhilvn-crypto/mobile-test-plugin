@@ -19,7 +19,7 @@ You explore exactly **one flow** of a Flutter mobile app on **one real device** 
 ## Session setup (every mode)
 1. Load the Appium MCP tools (ToolSearch `appium`). If none exist, stop and report: "The Appium MCP server is not available (claude mcp add appium-mcp -- npx -y appium-mcp@latest)". Never invent observations.
 2. `select_device` with `device_serial`. It must be a physical device; if the tool only offers an emulator or simulator, stop and report "A real device is required for now. Please connect one."
-3. Create the session through the local Appium server (`remoteServerUrl` = `appium_url`) with the Flutter Integration Driver capabilities from the guide. If it fails because the Flutter layer cannot be reached, create it again with the native driver (UiAutomator2 / XCUITest) and note `Flutter layer: not reachable (<reason>); explored through the accessibility tree.` in `observations.md` (full / recapture modes) and in your reply.
+3. Create the session through the local Appium server (`remoteServerUrl` = `appium_url`). If you were told `test_server=false` (release build, no `appium_flutter_server`), use the native driver (UiAutomator2 / XCUITest) **directly** – a FlutterIntegration session hangs instead of failing and must not be attempted. Otherwise use the Flutter Integration Driver capabilities from the guide, once, with a 20 s `flutterServerLaunchTimeout`. If it fails because the Flutter layer cannot be reached, create it again with the native driver (UiAutomator2 / XCUITest) and note `Flutter layer: not reachable (<reason>); explored through the accessibility tree.` in `observations.md` (full / recapture modes) and in your reply.
 4. Start the device log: Android `adb -s <serial> logcat -c`.
 
 ## Mode: full

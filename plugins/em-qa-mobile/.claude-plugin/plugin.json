@@ -1,7 +1,7 @@
 {
   "name": "em-qa-mobile",
   "displayName": "Emvigo QA Mobile (Appium + Flutter)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mobile QA for Flutter apps on real devices: builds human-style test cases from project docs, a test plan and Appium exploration (one file per platform); executes them as WebdriverIO + TypeScript Appium scripts with MD/XLSX results, bug files (screenshot, MP4 recording, device log) and a test report; and files the bugs into Jira (web and mobile) with links written back.",
   "author": { "name": "Akhil VN" },
   "keywords": ["qa", "mobile", "appium", "flutter", "android", "ios", "webdriverio", "typescript", "test-cases", "test-report", "jira", "bugs", "xlsx"],
